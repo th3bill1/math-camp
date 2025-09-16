@@ -68,10 +68,10 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0A8E18DA04FA47A4B110B95CF58D576B }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_99E23D9153AD492F886D8B99D0D4F284 }}
 
-      # ---------- Deploy to App Service (Linux/.NET 8) ----------
       - name: Deploy to Azure Web App
+        id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: MOM              # <-- exact App Service name
-          # slot-name: production    # optional; default is 'production'
-          package: server/publish
+          app-name: 'MOM'
+          slot-name: 'Production'
+          package: .
