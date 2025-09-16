@@ -2,8 +2,7 @@ import { BrowserRouter, Routes, Route, NavLink, Link } from "react-router-dom";
 import "katex/dist/katex.min.css";
 import Landing from "./pages/Landing";
 import Timetable from "./pages/Timetable";
-import Tasks, {Mlodsza, Starsza, Elita} from "./pages/Tasks";
-//import Scores, { ScoresStarsza, ScoresMlodsza, ScoresElita } from "./pages/Scores";
+import Tasks, { Mlodsza, Starsza, Elita } from "./pages/Tasks";
 import Match from "./pages/Match";
 import { useCamp } from "./context/CampContext";
 
@@ -15,7 +14,7 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className="max-w-5xl mx-auto p-4">
+      <div className="max-w-5xl mx-auto p-4 flex flex-col min-h-screen">
         <nav className="flex items-center justify-center gap-4 mb-6">
           {camp?.logoUrl && (
             <Link to="/" className="shrink-0">
@@ -29,23 +28,39 @@ export default function App() {
           <div className="flex gap-2">
             <NavLink className={active} to="/kalendarz">Kalendarz</NavLink>
             <NavLink className={active} to="/zadania">Zadania</NavLink>
-            {/*<NavLink className={active} to="/wyniki">Wyniki</NavLink> */}
+            {/* <NavLink className={active} to="/wyniki">Wyniki</NavLink> */}
             <NavLink className={active} to="/mecz">Mecz Matematyczny</NavLink>
           </div>
         </nav>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/kalendarz" element={<Timetable />} />
-          <Route path="/zadania" element={<Tasks />} />
-          {/*<Route path="/wyniki" element={<Scores />} />
-          <Route path="/wyniki/mlodsza" element={<ScoresMlodsza />} />
-          <Route path="/wyniki/starsza" element={<ScoresStarsza />} />
-          <Route path="/wyniki/elita" element={<ScoresElita />} />*/}
-          <Route path="/mecz" element={<Match />} />
-          <Route path="/zadania/mlodsza" element={<Mlodsza />} />
-          <Route path="/zadania/starsza" element={<Starsza />} />
-          <Route path="/zadania/elita" element={<Elita />} />
-        </Routes>
+
+        {/* Main content */}
+        <div className="flex-1">
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/kalendarz" element={<Timetable />} />
+            <Route path="/zadania" element={<Tasks />} />
+            {/* <Route path="/wyniki" element={<Scores />} /> */}
+            <Route path="/mecz" element={<Match />} />
+            <Route path="/zadania/mlodsza" element={<Mlodsza />} />
+            <Route path="/zadania/starsza" element={<Starsza />} />
+            <Route path="/zadania/elita" element={<Elita />} />
+          </Routes>
+        </div>
+
+        {/* Footer */}
+        <footer className="mt-8 border-t pt-4 text-center text-sm text-gray-600">
+          <div>
+            Strona stworzona przez <span className="font-medium">Wojciecha Wójcika </span>
+          </div>
+          <div className="mt-2">
+            Kadra:{" "}
+            <span className="font-medium">Tomasz Martyński</span>,{" "}
+            <span className="font-medium">Wojciech Wójcik</span>,{" "}
+            <span className="font-medium">Daniel Pazdro</span>,{" "}
+            <span className="font-medium">Anna Martyńska</span>,{" "}
+            <span className="font-medium">Daniel Kopacz</span>
+          </div>
+        </footer>
       </div>
     </BrowserRouter>
   );
