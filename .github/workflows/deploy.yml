@@ -1,4 +1,4 @@
-name: Build & Deploy to Azure App Service
+name: Build & Deploy (OIDC)
 
 on:
   push:
@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -41,7 +41,7 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '8.0.x'
 
       - name: Restore
         working-directory: server
@@ -51,33 +51,22 @@ jobs:
         working-directory: server
         run: dotnet build -c Release --no-restore
 
-      # (Optional) run tests if you add them
-      # - name: Test
-      #   run: dotnet test -c Release --no-build --verbosity normal
-
       - name: Publish
         working-directory: server
         run: dotnet publish -c Release -o publish
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      # ---------- Azure login (OIDC, no publish profile needed) ----------
+      - name: Login to Azure
+        uses: azure/login@v2
         with:
-          name: app
-          path: server/publish
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_64232406BE5F46709E5912476A4DEDDB }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_0A8E18DA04FA47A4B110B95CF58D576B }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_99E23D9153AD492F886D8B99D0D4F284 }}
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment: production
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: app
-          path: ./publish
-
+      # ---------- Deploy to App Service (Linux/.NET 8) ----------
       - name: Deploy to Azure Web App
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-deploy@v3
         with:
-            publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
-            package: ./publish
+          app-name: MOM              # <-- exact App Service name
+          # slot-name: production    # optional; default is 'production'
+          package: server/publish
