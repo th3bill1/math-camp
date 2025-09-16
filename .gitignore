@@ -1,0 +1,72 @@
+### Node / React ###
+node_modules/
+dist/
+build/
+.cache/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.vite/
+coverage/
+.DS_Store
+*.local
+
+### dotenv / secrets ###
+.env
+.env.local
+.env.*.local
+
+### VS / C# / .NET ###
+## User-specific
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+*.cache/
+*.dll
+*.exe
+*.pdb
+*.dbmdl
+*.bak
+*.ldf
+*.ndf
+
+## Visual Studio
+.vs/
+
+## Rider / JetBrains
+.idea/
+
+## ASP.NET publish outputs
+publish/
+server/wwwroot/
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+
+## Others
+_ReSharper*/
+[Tt]est[Rr]esult*/
+*.CoverletCoverage
+*.coverage
+*.coveragexml
+
+# Azure + config
+*.PublishSettings
+*.pubxml
+*.pubxml.user
+
+### Misc ###
+Thumbs.db
+ehthumbs.db
+desktop.ini

@@ -1,0 +1,342 @@
+{
+  "days": [
+    {
+      "label": "Środa",
+      "slots": [
+        {
+          "start": "08:00",
+          "title": "Wyjazd spod II LO, Park Leśny",
+          "type": "other",
+          "groups": [ "wszyscy" ],
+          "end": "9:00"
+        },
+        {
+          "start": "10:15",
+          "title": "Oficjalne przywitanie",
+          "type": "other",
+          "groups": [ "wszyscy" ],
+          "approx": true,
+          "end": "10:30"
+        },
+        {
+          "start": "10:30",
+          "end": "14:00",
+          "title": "Kontest 1",
+          "type": "contest",
+          "groups": [ "młodsza", "starsza", "elita" ]
+        },
+        {
+          "start": "14:00",
+          "title": "Obiad",
+          "type": "meal",
+          "groups": [ "wszyscy" ],
+          "end": "14:30"
+        },
+        {
+          "start": "14:30",
+          "end": "16:00",
+          "title": "Czas wolny (długość zależna od grupy)",
+          "type": "free_time",
+          "groups": [ "wszyscy" ]
+        },
+        {
+          "start": "16:20",
+          "end": "16:40",
+          "title": "Omówienie kontestu (elita)",
+          "type": "other",
+          "groups": [ "elita" ],
+          "location": "Świetlica"
+        },
+        {
+          "start": "16:30",
+          "end": "16:50",
+          "title": "Omówienie kontestu (młodsza)",
+          "type": "other",
+          "groups": [ "młodsza" ]
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "title": "Wykład: Wzory skróconego mnożenia (młodsza)",
+          "type": "lecture",
+          "groups": [ "młodsza" ]
+        },
+        {
+          "start": "17:00",
+          "title": "Omówienie kontestu (starsza)",
+          "type": "other",
+          "groups": [ "starsza" ],
+          "location": "Świetlica"
+        },
+        {
+          "start": "17:30",
+          "title": "Warsztaty z lingwistyki (chętni – starsza/elita)",
+          "type": "workshop",
+          "groups": [ "starsza", "elita" ],
+          "location": "Świetlica",
+          "duration": 60
+        },
+        {
+          "start": "18:45",
+          "title": "Kolacja",
+          "type": "meal",
+          "groups": [ "wszyscy" ],
+          "duration": 60
+        },
+        {
+          "start": "19:30",
+          "title": "Wykład: Zasada minimum i maksimum",
+          "type": "lecture",
+          "groups": [ "starsza", "elita" ],
+          "duration": 60
+        },
+        {
+          "start": "19:30",
+          "title": "Warsztaty z lingwistyki (chętni – młodsza)",
+          "type": "workshop",
+          "groups": [ "młodsza" ],
+          "location": "Świetlica",
+          "duration": 60
+        },
+        {
+          "start": "21:00",
+          "title": "Wykład: Podobieństwo spiralne (elita)",
+          "type": "lecture",
+          "groups": [ "elita" ],
+          "duration": 60
+        }
+      ]
+    },
+    {
+      "label": "Czwartek",
+      "slots": [
+        {
+          "start": "08:00",
+          "title": "Śniadanie",
+          "type": "meal",
+          "groups": [ "wszyscy" ],
+          "duration": 60
+        },
+        {
+          "start": "09:00",
+          "end": "13:00",
+          "title": "Kontest 2",
+          "type": "contest",
+          "groups": [ "młodsza", "starsza", "elita" ],
+          "duration": 240
+        },
+        {
+          "start": "14:00",
+          "title": "Obiad",
+          "type": "meal",
+          "groups": [ "wszyscy" ],
+          "duration": 60
+        },
+        {
+          "title": "Czas wolny",
+          "type": "free_time",
+          "groups": [ "wszyscy" ],
+          "duration": null
+        },
+        {
+          "start": "16:00",
+          "title": "Wykład: Okrąg wpisany i opisany (młodsza)",
+          "type": "lecture",
+          "groups": [ "młodsza" ],
+          "duration": 60
+        },
+        {
+          "start": "16:20",
+          "title": "Omówienie kontestu (starsza)",
+          "type": "other",
+          "groups": [ "starsza" ],
+          "location": "Świetlica",
+          "duration": 60
+        },
+        {
+          "start": "16:50",
+          "title": "Omówienie kontestu (elita)",
+          "type": "other",
+          "groups": [ "elita" ],
+          "location": "Świetlica",
+          "duration": 60
+        },
+        {
+          "start": "17:30",
+          "title": "Wykład: Równania diofantyczne (starsza/elita)",
+          "type": "lecture",
+          "groups": [ "starsza", "elita" ],
+          "duration": 60
+        },
+        {
+          "start": "17:30",
+          "title": "Omówienie kontestu (młodsza)",
+          "type": "other",
+          "groups": [ "młodsza" ],
+          "location": "Świetlica",
+          "duration": 60
+        },
+        {
+          "start": "19:00",
+          "title": "Kolacja – ognisko (jeżeli pogoda dopisze)",
+          "type": "meal",
+          "groups": [ "wszyscy" ],
+          "approx": true,
+          "notes": "Ognisko zależne od pogody",
+          "duration": 60
+        },
+        {
+          "title": "Warsztaty: modulo",
+          "type": "workshop",
+          "groups": [ "młodsza", "starsza", "elita" ],
+          "notes": "Po ognisku",
+          "duration": null
+        }
+      ]
+    },
+    {
+      "label": "Piątek",
+      "slots": [
+        {
+          "start": "08:00",
+          "title": "Śniadanie",
+          "type": "meal",
+          "groups": [ "wszyscy" ],
+          "duration": 60
+        },
+        {
+          "start": "09:00",
+          "end": "13:00",
+          "title": "Kontest 3",
+          "type": "contest",
+          "groups": [ "młodsza", "starsza", "elita" ],
+          "duration": 240
+        },
+        {
+          "start": "14:00",
+          "title": "Obiad",
+          "type": "meal",
+          "groups": [ "wszyscy" ],
+          "duration": 60
+        },
+        {
+          "title": "Czas wolny",
+          "type": "free_time",
+          "groups": [ "wszyscy" ],
+          "duration": null
+        },
+        {
+          "start": "15:30",
+          "title": "Wykład: Kolorowanie (młodsza)",
+          "type": "lecture",
+          "groups": [ "młodsza" ],
+          "location": "Świetlica",
+          "duration": 60
+        },
+        {
+          "start": "15:30",
+          "title": "Omówienie kontestu (starsza)",
+          "type": "other",
+          "groups": [ "starsza" ],
+          "duration": 60
+        },
+        {
+          "start": "16:00",
+          "title": "Wykład: Algebra z członkiem Komitetu Głównego OM (starsza/elita)",
+          "type": "lecture",
+          "groups": [ "starsza", "elita" ],
+          "duration": 60
+        },
+        {
+          "title": "Wykład: Potęga punktu (starsza)",
+          "type": "lecture",
+          "groups": [ "starsza" ],
+          "location": "Świetlica",
+          "notes": "Godzina wariantowa 17:00 lub 15:30",
+          "startCandidates": [ "17:00", "15:30" ],
+          "duration": null
+        },
+        {
+          "start": "17:30",
+          "title": "Omówienie kontestu (elita)",
+          "type": "other",
+          "groups": [ "elita" ],
+          "duration": 60
+        },
+        {
+          "title": "Omówienie kontestu (młodsza)",
+          "type": "other",
+          "groups": [ "młodsza" ],
+          "location": "Świetlica",
+          "notes": "Godzina wariantowa 18:00 lub 18:15",
+          "startCandidates": [ "18:00", "18:15" ],
+          "duration": null
+        },
+        {
+          "start": "18:45",
+          "title": "Kolacja",
+          "type": "meal",
+          "groups": [ "wszyscy" ],
+          "duration": 60
+        },
+        {
+          "title": "Podział na Mecz Matematyczny, rozdanie zadań i praca nad zadaniami z Meczu",
+          "type": "other",
+          "groups": [ "młodsza", "starsza", "elita" ],
+          "notes": "Czas nieograniczony",
+          "duration": null
+        }
+      ]
+    },
+    {
+      "label": "Sobota",
+      "slots": [
+        {
+          "start": "08:00",
+          "title": "Śniadanie",
+          "type": "meal",
+          "groups": [ "wszyscy" ],
+          "duration": 60
+        },
+        {
+          "start": "09:00",
+          "title": "Mecz Matematyczny (młodsza)",
+          "type": "match",
+          "groups": [ "młodsza" ],
+          "duration": 60
+        },
+        {
+          "start": "09:00",
+          "title": "Mecz Matematyczny (elita)",
+          "type": "match",
+          "groups": [ "elita" ],
+          "location": "Świetlica",
+          "notes": "Inne grupy mogą przyjść jako publiczność",
+          "duration": 60
+        },
+        {
+          "start": "11:00",
+          "title": "Mecz Matematyczny (starsza)",
+          "type": "match",
+          "groups": [ "starsza" ],
+          "notes": "Inne grupy mogą przyjść jako publiczność",
+          "duration": 60
+        },
+        {
+          "start": "13:30",
+          "title": "Zakończenie obozu, podsumowanie",
+          "type": "other",
+          "groups": [ "wszyscy" ],
+          "duration": 60
+        },
+        {
+          "start": "14:00",
+          "title": "Wyjazd do Mielca",
+          "type": "other",
+          "groups": [ "wszyscy" ],
+          "duration": 60
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "days": [
+    {
+      "date": "2025-07-01",
+      "groups": [
+        {"name": "Group A", "tasks": ["A1","A2","A3","A4"]},
+        {"name": "Group B", "tasks": ["B1","B2","B3","B4"]},
+        {"name": "Group C", "tasks": ["C1","C2","C3","C4"]}
+      ]
+    }
+  ]
+}
