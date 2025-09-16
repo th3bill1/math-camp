@@ -3,32 +3,58 @@ name: Build & Deploy to Azure App Service
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      # Build React
-      - uses: actions/setup-node@v4
-        with: { node-version: '20' }
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ---------- Frontend (React / Vite) ----------
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: client/package-lock.json
+
       - name: Install & build client
         working-directory: client
         run: |
           npm ci
           npm run build
 
-      # Move React build to server/wwwroot
-      - name: Copy frontend to server/wwwroot
+      - name: Copy client dist to server/wwwroot
         run: |
           rm -rf server/wwwroot
           mkdir -p server/wwwroot
           cp -r client/dist/* server/wwwroot/
 
-      # .NET publish
-      - uses: actions/setup-dotnet@v4
-        with: { dotnet-version: '8.0.x' }
+      # ---------- Backend (.NET 8) ----------
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore
+        working-directory: server
+        run: dotnet restore
+
+      - name: Build
+        working-directory: server
+        run: dotnet build -c Release --no-restore
+
+      # (Optional) run tests if you add them
+      # - name: Test
+      #   run: dotnet test -c Release --no-build --verbosity normal
+
       - name: Publish
         working-directory: server
         run: dotnet publish -c Release -o publish
@@ -44,11 +70,15 @@ jobs:
     runs-on: ubuntu-latest
     environment: production
     steps:
-      - uses: actions/download-artifact@v4
-        with: { name: app, path: ./publish }
-      - name: Deploy to Azure WebApp
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: app
+          path: ./publish
+
+      - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: YOUR_APP_SERVICE_NAME
+          app-name: MOM
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
           package: ./publish
