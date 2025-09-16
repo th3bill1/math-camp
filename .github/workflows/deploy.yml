@@ -58,6 +58,9 @@ jobs:
       - name: Publish
         working-directory: server
         run: dotnet publish -c Release -o publish
+        
+      - name: List publish output
+        run: ls -alR server/publish
 
       # ---------- Azure login (OIDC) ----------
       - name: Login to Azure
