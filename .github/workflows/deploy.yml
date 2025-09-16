@@ -57,7 +57,14 @@ jobs:
 
       - name: Publish
         working-directory: server
-        run: dotnet publish -c Release -o publish
+        run: dotnet publish -c Release -o publish -r win-x64 --self-contained true
+        
+      - name: List published output
+        run: |
+            echo "== publish root =="
+            ls -la server/publish
+            echo "== wwwroot =="
+            ls -la server/publish/wwwroot || true
 
       # ---------- Azure login (OIDC) ----------
       - name: Login to Azure
