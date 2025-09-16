@@ -59,12 +59,16 @@ jobs:
         working-directory: server
         run: dotnet publish -c Release -o publish -r win-x64 --self-contained true
         
-      - name: List published output
+      - name: Ensure SPA is in wwwroot
         run: |
-            echo "== publish root =="
-            ls -la server/publish
-            echo "== wwwroot =="
-            ls -la server/publish/wwwroot || true
+          echo "== wwwroot =="
+          ls -la server/publish/wwwroot || true
+
+      - name: Create deploy zip (force Zip Deploy)
+        run: |
+          cd server/publish
+          zip -r ../site.zip .
+        shell: bash
 
       # ---------- Azure login (OIDC) ----------
       - name: Login to Azure
@@ -80,4 +84,5 @@ jobs:
         with:
           app-name: MOM
           slot-name: Production
-          package: .
+          package: server/site.zip
+          type: zip
