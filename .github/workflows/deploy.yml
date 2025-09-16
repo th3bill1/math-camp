@@ -72,6 +72,6 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'MOM'
-          slot-name: 'Production'
+          app-name: MOM
+          slot-name: Production
           package: .
