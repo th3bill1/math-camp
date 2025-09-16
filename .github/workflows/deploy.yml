@@ -62,7 +62,7 @@ jobs:
       - name: Zip publish output
         run: |
           cd server/publish
-          powershell Compress-Archive -Path * -DestinationPath ../app.zip
+          zip -r ../app.zip .
           cd -
 
       # ---------- Azure login (OIDC) ----------
