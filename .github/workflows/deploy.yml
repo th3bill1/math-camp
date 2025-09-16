@@ -58,9 +58,12 @@ jobs:
       - name: Publish
         working-directory: server
         run: dotnet publish -c Release -o publish
-        
-      - name: List publish output
-        run: ls -alR server/publish
+
+      - name: Zip publish output
+        run: |
+          cd server/publish
+          powershell Compress-Archive -Path * -DestinationPath ../app.zip
+          cd -
 
       # ---------- Azure login (OIDC) ----------
       - name: Login to Azure
@@ -71,9 +74,8 @@ jobs:
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_99E23D9153AD492F886D8B99D0D4F284 }}
 
       - name: Deploy to Azure Web App
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
           app-name: MOM
-          slot-name: Production
-          package: server/publish
+          package: server/app.zip
+          type: zip
