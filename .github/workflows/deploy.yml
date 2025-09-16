@@ -9,7 +9,6 @@ concurrency:
   group: deploy-${{ github.ref }}
   cancel-in-progress: true
 
-# 👇 Add this block
 permissions:
   id-token: write
   contents: read
@@ -42,7 +41,7 @@ jobs:
           mkdir -p server/wwwroot
           cp -r client/dist/* server/wwwroot/
 
-      # ---------- Backend (.NET 8) ----------
+      # ---------- Backend (.NET 9) ----------
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
@@ -60,7 +59,7 @@ jobs:
         working-directory: server
         run: dotnet publish -c Release -o publish
 
-      # ---------- Azure login (OIDC, no publish profile needed) ----------
+      # ---------- Azure login (OIDC) ----------
       - name: Login to Azure
         uses: azure/login@v2
         with:
