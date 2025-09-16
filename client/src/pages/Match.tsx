@@ -67,6 +67,14 @@ export default function Match() {
               <strong>Przeciwnicy</strong> drużyny rozwiązującej wybierają osobę, która podejdzie do tablicy.
               Każda osoba może być wybrana <strong>raz</strong> (chyba że wszyscy już byli wybierani).
             </li>
+            <li>
+              Na rozwiązanie zadania przy tablicy jest <strong>10 minut </strong>(chyba że kadra uzna, że rozwiązanie idzie w dobrym kierunku).
+              Po wyznaczonym czasie zadanie zostaje uznane za <strong>nierozwiązane</strong>.
+            </li>
+            <li>
+              Osoba przy tablicy może zostać <strong>wymieniona </strong> na inną osobę z drużyny. Nową osobę ponownie wybierają <strong>przeciwnicy</strong>.
+              Wymiana kosztuje <strong>1 + 2x punktów</strong>, gdzie <strong>x </strong> to liczba już dokonanych wymian w danym zadaniu.
+            </li>
           </ol>
         </div>
 

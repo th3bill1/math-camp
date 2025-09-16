@@ -3,7 +3,7 @@ import "katex/dist/katex.min.css";
 import Landing from "./pages/Landing";
 import Timetable from "./pages/Timetable";
 import Tasks, {Mlodsza, Starsza, Elita} from "./pages/Tasks";
-import Scores, { ScoresStarsza, ScoresMlodsza, ScoresElita } from "./pages/Scores";
+//import Scores, { ScoresStarsza, ScoresMlodsza, ScoresElita } from "./pages/Scores";
 import Match from "./pages/Match";
 import { useCamp } from "./context/CampContext";
 
@@ -29,7 +29,7 @@ export default function App() {
           <div className="flex gap-2">
             <NavLink className={active} to="/kalendarz">Kalendarz</NavLink>
             <NavLink className={active} to="/zadania">Zadania</NavLink>
-            <NavLink className={active} to="/wyniki">Wyniki</NavLink>
+            {/*<NavLink className={active} to="/wyniki">Wyniki</NavLink> */}
             <NavLink className={active} to="/mecz">Mecz Matematyczny</NavLink>
           </div>
         </nav>
@@ -37,10 +37,10 @@ export default function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/kalendarz" element={<Timetable />} />
           <Route path="/zadania" element={<Tasks />} />
-          <Route path="/wyniki" element={<Scores />} />
+          {/*<Route path="/wyniki" element={<Scores />} />
           <Route path="/wyniki/mlodsza" element={<ScoresMlodsza />} />
           <Route path="/wyniki/starsza" element={<ScoresStarsza />} />
-          <Route path="/wyniki/elita" element={<ScoresElita />} />
+          <Route path="/wyniki/elita" element={<ScoresElita />} />*/}
           <Route path="/mecz" element={<Match />} />
           <Route path="/zadania/mlodsza" element={<Mlodsza />} />
           <Route path="/zadania/starsza" element={<Starsza />} />

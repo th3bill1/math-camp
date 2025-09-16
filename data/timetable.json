@@ -8,19 +8,18 @@
           "title": "Wyjazd spod II LO, Park Leśny",
           "type": "other",
           "groups": [ "wszyscy" ],
-          "end": "9:00"
+          "duration": 60
         },
         {
           "start": "10:15",
           "title": "Oficjalne przywitanie",
           "type": "other",
           "groups": [ "wszyscy" ],
-          "approx": true,
-          "end": "10:30"
+          "duration": 15
         },
         {
           "start": "10:30",
-          "end": "14:00",
+          "duration": 210,
           "title": "Kontest 1",
           "type": "contest",
           "groups": [ "młodsza", "starsza", "elita" ]
@@ -30,43 +29,45 @@
           "title": "Obiad",
           "type": "meal",
           "groups": [ "wszyscy" ],
-          "end": "14:30"
+          "duration":  45
         },
         {
-          "start": "14:30",
-          "end": "16:00",
-          "title": "Czas wolny (długość zależna od grupy)",
+          "start": "14:45",
+          "title": "Czas wolny",
           "type": "free_time",
-          "groups": [ "wszyscy" ]
+          "groups": [ "wszyscy" ],
+          "notes": "Długość zależna od grupy",
+          "duration": 90
         },
         {
           "start": "16:20",
-          "end": "16:40",
-          "title": "Omówienie kontestu (elita)",
+          "title": "Omówienie kontestu",
           "type": "other",
           "groups": [ "elita" ],
-          "location": "Świetlica"
+          "location": "Świetlica",
+          "duration": 30
         },
         {
-          "start": "16:30",
-          "end": "16:50",
-          "title": "Omówienie kontestu (młodsza)",
+          "start": "16:20",
+          "title": "Omówienie kontestu",
           "type": "other",
-          "groups": [ "młodsza" ]
+          "groups": [ "młodsza" ],
+          "duration": 30
         },
         {
           "start": "17:00",
-          "end": "18:00",
-          "title": "Wykład: Wzory skróconego mnożenia (młodsza)",
+          "duration": 60,
+          "title": "Wykład: Wzory skróconego mnożenia",
           "type": "lecture",
           "groups": [ "młodsza" ]
         },
         {
           "start": "17:00",
-          "title": "Omówienie kontestu (starsza)",
+          "title": "Omówienie kontestu",
           "type": "other",
           "groups": [ "starsza" ],
-          "location": "Świetlica"
+          "location": "Świetlica",
+          "duration": 30
         },
         {
           "start": "17:30",
@@ -115,11 +116,10 @@
           "title": "Śniadanie",
           "type": "meal",
           "groups": [ "wszyscy" ],
-          "duration": 60
+          "duration": 45
         },
         {
           "start": "09:00",
-          "end": "13:00",
           "title": "Kontest 2",
           "type": "contest",
           "groups": [ "młodsza", "starsza", "elita" ],
@@ -130,36 +130,38 @@
           "title": "Obiad",
           "type": "meal",
           "groups": [ "wszyscy" ],
-          "duration": 60
+          "duration": 45
         },
         {
           "title": "Czas wolny",
+          "start": "14:45",
           "type": "free_time",
           "groups": [ "wszyscy" ],
-          "duration": null
+          "duration": 90,
+          "notes": "Długość zależna od grupy"
         },
         {
           "start": "16:00",
-          "title": "Wykład: Okrąg wpisany i opisany (młodsza)",
+          "title": "Wykład: Okrąg wpisany i opisany",
           "type": "lecture",
           "groups": [ "młodsza" ],
           "duration": 60
         },
         {
           "start": "16:20",
-          "title": "Omówienie kontestu (starsza)",
+          "title": "Omówienie kontestu",
           "type": "other",
           "groups": [ "starsza" ],
           "location": "Świetlica",
-          "duration": 60
+          "duration": 20
         },
         {
           "start": "16:50",
-          "title": "Omówienie kontestu (elita)",
+          "title": "Omówienie kontestu",
           "type": "other",
           "groups": [ "elita" ],
           "location": "Świetlica",
-          "duration": 60
+          "duration": 20
         },
         {
           "start": "17:30",
@@ -170,11 +172,11 @@
         },
         {
           "start": "17:30",
-          "title": "Omówienie kontestu (młodsza)",
+          "title": "Omówienie kontestu",
           "type": "other",
           "groups": [ "młodsza" ],
           "location": "Świetlica",
-          "duration": 60
+          "duration": 30
         },
         {
           "start": "19:00",
@@ -183,14 +185,15 @@
           "groups": [ "wszyscy" ],
           "approx": true,
           "notes": "Ognisko zależne od pogody",
-          "duration": 60
+          "duration": 90
         },
         {
           "title": "Warsztaty: modulo",
           "type": "workshop",
           "groups": [ "młodsza", "starsza", "elita" ],
           "notes": "Po ognisku",
-          "duration": null
+          "start":  "20:30",
+          "duration": 90
         }
       ]
     },
@@ -202,11 +205,10 @@
           "title": "Śniadanie",
           "type": "meal",
           "groups": [ "wszyscy" ],
-          "duration": 60
+          "duration": 45
         },
         {
           "start": "09:00",
-          "end": "13:00",
           "title": "Kontest 3",
           "type": "contest",
           "groups": [ "młodsza", "starsza", "elita" ],
@@ -217,13 +219,15 @@
           "title": "Obiad",
           "type": "meal",
           "groups": [ "wszyscy" ],
-          "duration": 60
+          "duration": 45
         },
         {
           "title": "Czas wolny",
           "type": "free_time",
           "groups": [ "wszyscy" ],
-          "duration": null
+          "start": "14:45",
+          "notes": "Długość zależna od grupy",
+          "duration": 45
         },
         {
           "start": "15:30",
@@ -252,9 +256,9 @@
           "type": "lecture",
           "groups": [ "starsza" ],
           "location": "Świetlica",
-          "notes": "Godzina wariantowa 17:00 lub 15:30",
-          "startCandidates": [ "17:00", "15:30" ],
-          "duration": null
+          "notes": "Start plus/minus 15 min",
+          "start": "17:15",
+          "duration": 60
         },
         {
           "start": "17:30",
@@ -268,23 +272,24 @@
           "type": "other",
           "groups": [ "młodsza" ],
           "location": "Świetlica",
-          "notes": "Godzina wariantowa 18:00 lub 18:15",
-          "startCandidates": [ "18:00", "18:15" ],
-          "duration": null
+          "notes": "Start plus/minus 15 min",
+          "start": "18:15",
+          "duration": 20
         },
         {
           "start": "18:45",
           "title": "Kolacja",
           "type": "meal",
           "groups": [ "wszyscy" ],
-          "duration": 60
+          "duration": 45
         },
         {
           "title": "Podział na Mecz Matematyczny, rozdanie zadań i praca nad zadaniami z Meczu",
           "type": "other",
           "groups": [ "młodsza", "starsza", "elita" ],
           "notes": "Czas nieograniczony",
-          "duration": null
+          "start": "19:45",
+          "duration": 30
         }
       ]
     },
@@ -296,14 +301,15 @@
           "title": "Śniadanie",
           "type": "meal",
           "groups": [ "wszyscy" ],
-          "duration": 60
+          "duration": 45
         },
         {
           "start": "09:00",
           "title": "Mecz Matematyczny (młodsza)",
           "type": "match",
           "groups": [ "młodsza" ],
-          "duration": 60
+          "notes": "Inne grupy mogą przyjść jako publiczność",
+          "duration": 90
         },
         {
           "start": "09:00",
@@ -312,7 +318,7 @@
           "groups": [ "elita" ],
           "location": "Świetlica",
           "notes": "Inne grupy mogą przyjść jako publiczność",
-          "duration": 60
+          "duration": 90
         },
         {
           "start": "11:00",
@@ -320,21 +326,21 @@
           "type": "match",
           "groups": [ "starsza" ],
           "notes": "Inne grupy mogą przyjść jako publiczność",
-          "duration": 60
+          "duration": 90
         },
         {
           "start": "13:30",
           "title": "Zakończenie obozu, podsumowanie",
           "type": "other",
           "groups": [ "wszyscy" ],
-          "duration": 60
+          "duration": 30
         },
         {
           "start": "14:00",
           "title": "Wyjazd do Mielca",
           "type": "other",
           "groups": [ "wszyscy" ],
-          "duration": 60
+          "duration": 70
         }
       ]
     }
