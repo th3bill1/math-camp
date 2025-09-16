@@ -9,6 +9,11 @@ concurrency:
   group: deploy-${{ github.ref }}
   cancel-in-progress: true
 
+# 👇 Add this block
+permissions:
+  id-token: write
+  contents: read
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
