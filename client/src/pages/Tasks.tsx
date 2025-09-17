@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function PdfViewer({ file }: { file: string }) {
+export function PdfViewer({ file }: { file: string }) {
   return (
     <div className="w-full h-[85vh]">
       <iframe
@@ -47,6 +47,12 @@ export default function Tasks() {
             {g.name}
           </Link>
         ))}
+      </div>
+      <div className="text-sm text-gray-600 mt-4 max-w-md text-center">
+        Jeśli chcesz zobaczyć zadania z poprzednich dni, przejdź do{" "}
+        <Link to="/archiwum" className="text-blue-600 hover:underline">
+          archiwum
+        </Link>.
       </div>
     </div>
   );

@@ -1,0 +1,40 @@
+import { Link } from "react-router-dom";
+import { PdfViewer } from "./Tasks";
+
+export default function Lectures() {
+  const groups = [
+    { name: "Wzory Skróconego Mnożenia", path: "/wyklady/wsm", color: "bg-blue-50 hover:bg-blue-100" },
+    { name: "Zasada minimum/maksimum",   path: "/wyklady/zmm", color: "bg-green-50 hover:bg-green-100" },
+    { name: "Podopieństwo spiralne",     path: "/wyklady/ps",  color: "bg-purple-50 hover:bg-purple-100" },
+  ];
+
+  return (
+    <div className="max-w-4xl mx-auto py-10 px-6 space-y-8">
+      <h1 className="text-2xl font-bold text-center">Wykłady</h1>
+      <div className="grid gap-6 sm:grid-cols-3">
+        {groups.map((g) => (
+          <Link
+            key={g.name}
+            to={g.path}
+            className={`rounded-2xl shadow px-5 py-8 text-center transition ${g.color}`}
+          >
+            <div className="text-lg font-semibold">{g.name}</div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Individual lecture pages
+export function WSM() {
+  return <PdfViewer file="/data/wsm.pdf" />;
+}
+
+export function ZMM() {
+  return <PdfViewer file="/data/zmm.pdf" />;
+}
+
+export function PS() {
+  return <PdfViewer file="/data/ps.pdf" />;
+}

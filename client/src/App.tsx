@@ -5,6 +5,8 @@ import Timetable from "./pages/Timetable";
 import Tasks, { Mlodsza, Starsza, Elita } from "./pages/Tasks";
 import Match from "./pages/Match";
 import { useCamp } from "./context/CampContext";
+import Lectures, { WSM, ZMM, PS } from "./pages/Lectures";
+import TasksArchive, { Mlodsza1, Starsza1, Elita1 } from "./pages/Archive";
 
 export default function App() {
   const camp = useCamp();
@@ -28,8 +30,10 @@ export default function App() {
           <div className="flex gap-2">
             <NavLink className={active} to="/kalendarz">Kalendarz</NavLink>
             <NavLink className={active} to="/zadania">Zadania</NavLink>
+            <NavLink className={active} to="/wyklady">Wykłady</NavLink>
             {/* <NavLink className={active} to="/wyniki">Wyniki</NavLink> */}
             <NavLink className={active} to="/mecz">Mecz Matematyczny</NavLink>
+            
           </div>
         </nav>
 
@@ -44,6 +48,14 @@ export default function App() {
             <Route path="/zadania/mlodsza" element={<Mlodsza />} />
             <Route path="/zadania/starsza" element={<Starsza />} />
             <Route path="/zadania/elita" element={<Elita />} />
+            <Route path="/wyklady" element={<Lectures />} />
+            <Route path="/wyklady/wsm" element={<WSM />} />
+            <Route path="/wyklady/zmm" element={<ZMM />} />
+            <Route path="/wyklady/ps" element={<PS />} />
+            <Route path="/archiwum" element={<TasksArchive />} />
+            <Route path="/archiwum/mlodsza1" element={<Mlodsza1 />} />
+            <Route path="/archiwum/starsza1" element={<Starsza1 />} />
+            <Route path="/archiwum/elita1" element={<Elita1 />} />
           </Routes>
         </div>
 
