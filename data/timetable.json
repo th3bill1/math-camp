@@ -28,6 +28,7 @@
           "start": "14:00",
           "title": "Obiad",
           "type": "meal",
+          "location": "Stołówka",
           "groups": [ "wszyscy" ],
           "duration":  45
         },
@@ -117,6 +118,7 @@
           "start": "08:00",
           "title": "Śniadanie",
           "type": "meal",
+          "location": "Stołówka",
           "groups": [ "wszyscy" ],
           "duration": 45
         },
@@ -128,9 +130,17 @@
           "duration": 240
         },
         {
+          "title": "Czas wolny",
+          "type": "free_time",
+          "groups": [ "wszyscy" ],
+          "start": "13:00",
+          "duration": 60
+        },
+        {
           "start": "14:00",
           "title": "Obiad",
           "type": "meal",
+          "location": "Stołówka",
           "groups": [ "wszyscy" ],
           "duration": 45
         },
@@ -146,6 +156,7 @@
           "start": "16:00",
           "title": "Wykład: Okrąg wpisany i opisany",
           "type": "lecture",
+          "location": "Świetlica",
           "groups": [ "młodsza" ],
           "duration": 90
         },
@@ -154,7 +165,7 @@
           "title": "Omówienie kontestu",
           "type": "other",
           "groups": [ "starsza" ],
-          "location": "Świetlica",
+          "location": "Sala 23",
           "duration": 40
         },
         {
@@ -162,13 +173,14 @@
           "title": "Omówienie kontestu",
           "type": "other",
           "groups": [ "elita" ],
-          "location": "Świetlica",
+          "location": "Sala 23",
           "duration": 45
         },
         {
           "start": "17:30",
           "title": "Wykład: Równania diofantyczne",
           "type": "lecture",
+          "location": "Świetlica",
           "groups": [ "starsza", "elita" ],
           "duration": 90
         },
@@ -177,7 +189,7 @@
           "title": "Omówienie kontestu",
           "type": "other",
           "groups": [ "młodsza" ],
-          "location": "Świetlica",
+          "location": "Sala 23",
           "duration": 30
         },
         {
@@ -187,6 +199,7 @@
           "groups": [ "wszyscy" ],
           "approx": true,
           "notes": "Ognisko zależne od pogody",
+          "location": "Na zewnątrz",
           "duration": 90
         },
         {
@@ -194,7 +207,8 @@
           "type": "workshop",
           "groups": [ "młodsza", "starsza", "elita" ],
           "notes": "Po ognisku",
-          "start":  "20:30",
+          "location": "Świetlica",
+          "start": "20:30",
           "duration": 90
         }
       ]
@@ -206,6 +220,7 @@
           "start": "08:00",
           "title": "Śniadanie",
           "type": "meal",
+          "location": "Stołówka",
           "groups": [ "wszyscy" ],
           "duration": 45
         },
@@ -217,9 +232,17 @@
           "duration": 240
         },
         {
+          "title": "Czas wolny",
+          "type": "free_time",
+          "groups": [ "wszyscy" ],
+          "start": "13:00",
+          "duration": 60
+        },
+        {
           "start": "14:00",
           "title": "Obiad",
           "type": "meal",
+          "location": "Stołówka",
           "groups": [ "wszyscy" ],
           "duration": 45
         },
@@ -229,10 +252,10 @@
           "groups": [ "wszyscy" ],
           "start": "14:45",
           "notes": "Długość zależna od grupy",
-          "duration": 45
+          "duration": 30
         },
         {
-          "start": "15:30",
+          "start": "15:45",
           "title": "Wykład: Kolorowanie",
           "type": "lecture",
           "groups": [ "młodsza" ],
@@ -240,16 +263,18 @@
           "duration": 90
         },
         {
-          "start": "15:30",
+          "start": "15:15",
           "title": "Omówienie kontestu",
           "type": "other",
+          "location": "Sala 23",
           "groups": [ "starsza" ],
-          "duration": 30
+          "duration": 45
         },
         {
           "start": "16:00",
           "title": "Wykład: Algebra z członkiem Komitetu Głównego OM",
           "type": "lecture",
+          "location": "Sala 23",
           "groups": [ "starsza", "elita" ],
           "duration": 90
         },
@@ -266,6 +291,7 @@
           "start": "17:30",
           "title": "Omówienie kontestu",
           "type": "other",
+          "location": "Sala 23",
           "groups": [ "elita" ],
           "duration": 45
         },
@@ -273,15 +299,15 @@
           "title": "Omówienie kontestu",
           "type": "other",
           "groups": [ "młodsza" ],
-          "location": "Świetlica",
-          "notes": "Start plus/minus 15 min",
-          "start": "18:15",
+          "location": "Sala 23",
+          "start": "15:15",
           "duration": 30
         },
         {
           "start": "18:45",
           "title": "Kolacja",
           "type": "meal",
+          "location": "Stołówka",
           "groups": [ "wszyscy" ],
           "duration": 45
         },
@@ -290,8 +316,9 @@
           "type": "other",
           "groups": [ "młodsza", "starsza", "elita" ],
           "notes": "Czas nieograniczony",
+          "location": "Świetlica",
           "start": "19:45",
-          "duration": 30
+          "duration": 45
         }
       ]
     },
@@ -309,9 +336,10 @@
           "start": "09:00",
           "title": "Mecz Matematyczny",
           "type": "match",
+          "location": "Sala 23",
           "groups": [ "młodsza" ],
           "notes": "Inne grupy mogą przyjść jako publiczność",
-          "duration": 90
+          "duration": 120
         },
         {
           "start": "09:00",
@@ -320,20 +348,22 @@
           "groups": [ "elita" ],
           "location": "Świetlica",
           "notes": "Inne grupy mogą przyjść jako publiczność",
-          "duration": 90
+          "duration": 120
         },
         {
           "start": "11:00",
           "title": "Mecz Matematyczny",
           "type": "match",
+          "location": "Sala 23",
           "groups": [ "starsza" ],
           "notes": "Inne grupy mogą przyjść jako publiczność",
-          "duration": 90
+          "duration": 120
         },
         {
           "start": "13:30",
           "title": "Zakończenie obozu, podsumowanie",
           "type": "other",
+          "location": "Świetlica",
           "groups": [ "wszyscy" ],
           "duration": 30
         },
