@@ -6,6 +6,9 @@ export default function Lectures() {
     { name: "Wzory Skróconego Mnożenia", path: "/wyklady/wsm", color: "bg-blue-50 hover:bg-blue-100" },
     { name: "Zasada minimum/maksimum",   path: "/wyklady/zmm", color: "bg-green-50 hover:bg-green-100" },
     { name: "Podopieństwo spiralne",     path: "/wyklady/ps",  color: "bg-purple-50 hover:bg-purple-100" },
+    { name: "Okręgi wpisane i opisane",  path: "/wyklady/owio", color: "bg-yellow-50 hover:bg-yellow-100" },
+    { name: "Równania diofantyczne",     path: "/wyklady/rd",  color: "bg-red-50 hover:bg-red-100" },
+    { name: "Warsztaty modulo",          path: "/wyklady/wm",  color: "bg-pink-50 hover:bg-pink-100" },
   ];
 
   return (
@@ -37,4 +40,13 @@ export function ZMM() {
 
 export function PS() {
   return <PdfViewer file="/data/ps.pdf" />;
+}
+export function OWIO() {
+    return <PdfViewer file="/data/owio.pdf" />;
+}
+export function RD() {
+    return <PdfViewer file="/data/rd.pdf" />;
+}
+export function WM() {
+    return <PdfViewer file="/data/wm.pdf" />;
 }

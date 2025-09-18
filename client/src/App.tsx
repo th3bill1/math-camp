@@ -5,7 +5,7 @@ import Timetable from "./pages/Timetable";
 import Tasks, { Mlodsza, Starsza, Elita } from "./pages/Tasks";
 import Match from "./pages/Match";
 import { useCamp } from "./context/CampContext";
-import Lectures, { WSM, ZMM, PS } from "./pages/Lectures";
+import Lectures, { WSM, ZMM, PS, OWIO, RD, WM } from "./pages/Lectures";
 import TasksArchive, { Mlodsza1, Starsza1, Elita1, Mlodsza2, Starsza2, Elita2 } from "./pages/Archive";
 
 export default function App() {
@@ -52,6 +52,9 @@ export default function App() {
             <Route path="/wyklady/wsm" element={<WSM />} />
             <Route path="/wyklady/zmm" element={<ZMM />} />
             <Route path="/wyklady/ps" element={<PS />} />
+            <Route path="/wyklady/owio" element={<OWIO />} />
+            <Route path="/wyklady/rd" element={<RD />} />
+            <Route path="/wyklady/wm" element={<WM />} />
             <Route path="/archiwum" element={<TasksArchive />} />
             <Route path="/archiwum/mlodsza1" element={<Mlodsza1 />} />
             <Route path="/archiwum/starsza1" element={<Starsza1 />} />
