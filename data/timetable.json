@@ -150,15 +150,15 @@
           "duration": 90
         },
         {
-          "start": "16:20",
+          "start": "16:00",
           "title": "Omówienie kontestu",
           "type": "other",
           "groups": [ "starsza" ],
           "location": "Świetlica",
-          "duration": 30
+          "duration": 40
         },
         {
-          "start": "16:50",
+          "start": "16:40",
           "title": "Omówienie kontestu",
           "type": "other",
           "groups": [ "elita" ],
