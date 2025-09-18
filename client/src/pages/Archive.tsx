@@ -2,22 +2,37 @@ import { Link } from "react-router-dom";
 import { PdfViewer } from "./Tasks";
 
 export function Mlodsza1() {
-  return <PdfViewer file="/data/cm.pdf" />;
+  return <PdfViewer file="/data/cm1.pdf" />;
 }
 
 export function Starsza1() {
-  return <PdfViewer file="/data/cs.pdf" />;
+  return <PdfViewer file="/data/cs1.pdf" />;
 }
 
 export function Elita1() {
-  return <PdfViewer file="/data/ce.pdf" />;
+  return <PdfViewer file="/data/ce1.pdf" />;
+}
+
+export function Mlodsza2() {
+  return <PdfViewer file="/data/cm2.pdf" />;
+}
+
+export function Starsza2() {
+  return <PdfViewer file="/data/cs2.pdf" />;
+}
+
+export function Elita2() {
+  return <PdfViewer file="/data/ce2.pdf" />;
 }
 
 export default function TasksArchive() {
   const groups = [
-    { name: "Młodsza Dzień 1", path: "/zadania/mlodsza", color: "bg-blue-100 text-blue-800 hover:bg-blue-200" },
-    { name: "Starsza Dzień 1", path: "/zadania/starsza", color: "bg-green-100 text-green-800 hover:bg-green-200" },
-    { name: "Elita Dzień 1", path: "/zadania/elita", color: "bg-purple-100 text-purple-800 hover:bg-purple-200" },
+    { name: "Młodsza Dzień 1", path: "/archiwum/mlodsza1", color: "bg-blue-100 text-blue-800 hover:bg-blue-200" },
+    { name: "Starsza Dzień 1", path: "/archiwum/starsza1", color: "bg-green-100 text-green-800 hover:bg-green-200" },
+    { name: "Elita Dzień 1", path: "/archiwum/elita1", color: "bg-purple-100 text-purple-800 hover:bg-purple-200" },
+    { name: "Młodsza Dzień 2", path: "/archiwum/mlodsza2", color: "bg-blue-100 text-blue-800 hover:bg-blue-200" },
+    { name: "Starsza Dzień 2", path: "/archiwum/starsza2", color: "bg-green-100 text-green-800 hover:bg-green-200" },
+    { name: "Elita Dzień 2", path: "/archiwum/elita2", color: "bg-purple-100 text-purple-800 hover:bg-purple-200" },
   ];
 
   return (

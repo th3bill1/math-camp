@@ -13,15 +13,15 @@ export function PdfViewer({ file }: { file: string }) {
 }
 
 export function Mlodsza() {
-  return <PdfViewer file="/data/cm.pdf" />;
+  return <PdfViewer file="/data/cm2.pdf" />;
 }
 
 export function Starsza() {
-  return <PdfViewer file="/data/cs.pdf" />;
+  return <PdfViewer file="/data/cs2.pdf" />;
 }
 
 export function Elita() {
-  return <PdfViewer file="/data/ce.pdf" />;
+  return <PdfViewer file="/data/ce2.pdf" />;
 }
 
 export default function Tasks() {
