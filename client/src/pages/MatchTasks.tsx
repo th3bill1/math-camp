@@ -12,15 +12,15 @@ export function PdfViewer({ file }: { file: string }) {
   );
 }
 
-export function Mlodsza() {
+export function MlodszaMecz() {
   return <PdfViewer file="/data/mmm.pdf" />;
 }
 
-export function Starsza() {
+export function StarszaMecz() {
   return <PdfViewer file="/data/mms.pdf" />;
 }
 
-export function Elita() {
+export function ElitaMecz() {
   return <PdfViewer file="/data/mme.pdf" />;
 }
 
