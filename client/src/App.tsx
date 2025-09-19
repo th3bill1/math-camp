@@ -7,6 +7,7 @@ import Match from "./pages/Match";
 import { useCamp } from "./context/CampContext";
 import Lectures, { WSM, ZMM, PS, OWIO, RD, WM, PP, KOL, WIE } from "./pages/Lectures";
 import TasksArchive, { Mlodsza1, Starsza1, Elita1, Mlodsza2, Starsza2, Elita2, Mlodsza3, Starsza3, Elita3 } from "./pages/Archive";
+import MatchTasks, { MlodszaMecz, StarszaMecz, ElitaMecz } from "./pages/MatchTasks";
 
 export default function App() {
   const camp = useCamp();
@@ -68,6 +69,10 @@ export default function App() {
             <Route path="/archiwum/mlodsza3" element={<Mlodsza3 />} />
             <Route path="/archiwum/starsza3" element={<Starsza3 />} />
             <Route path="/archiwum/elita3" element={<Elita3 />} />
+            <Route path="/mecz/zadania" element={<MatchTasks />} />
+            <Route path="/mecz/mlodsza" element={<MlodszaMecz />} />
+            <Route path="/mecz/starsza" element={<StarszaMecz />} />
+            <Route path="/mecz/elita" element={<ElitaMecz />} />
           </Routes>
         </div>
 
