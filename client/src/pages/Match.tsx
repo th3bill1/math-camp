@@ -24,6 +24,15 @@ export default function Match() {
         </p>
       </div>
 
+      <div className="text-center">
+        <Link
+          to="/mecz/zadania"
+          className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition"
+        >
+          Zobacz zadania Meczu Matematycznego
+        </Link>
+      </div>
+
       {/* Zasady – sekcje */}
       <section className="space-y-6">
         <div className="rounded-2xl border p-6">
