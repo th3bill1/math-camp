@@ -239,12 +239,12 @@
           "duration": 60
         },
         {
-          "start": "14:00",
+          "start": "14:15",
           "title": "Obiad",
           "type": "meal",
           "location": "Stołówka",
           "groups": [ "wszyscy" ],
-          "duration": 45
+          "duration": 30
         },
         {
           "title": "Czas wolny",
