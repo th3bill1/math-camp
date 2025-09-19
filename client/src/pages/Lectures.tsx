@@ -9,6 +9,9 @@ export default function Lectures() {
     { name: "Okręgi wpisane i opisane",  path: "/wyklady/owio", color: "bg-yellow-50 hover:bg-yellow-100" },
     { name: "Równania diofantyczne",     path: "/wyklady/rd",  color: "bg-red-50 hover:bg-red-100" },
     { name: "Warsztaty modulo",          path: "/wyklady/wm",  color: "bg-pink-50 hover:bg-pink-100" },
+    { name: "Kolorowanie",               path: "/wyklady/kol",  color: "bg-pink-50 hover:bg-pink-100" },
+    { name: "Potęga punktu",             path: "/wyklady/pp",  color: "bg-pink-50 hover:bg-pink-100" },
+    { name: "Wielomiany",                path: "/wyklady/wie",  color: "bg-pink-50 hover:bg-pink-100" },
   ];
 
   return (
@@ -49,4 +52,13 @@ export function RD() {
 }
 export function WM() {
     return <PdfViewer file="/data/wm.pdf" />;
+}
+export function KOL() {
+    return <PdfViewer file="/data/kol.pdf" />;
+}
+export function PP() {
+    return <PdfViewer file="/data/pp.pdf" />;
+}
+export function WIE() {
+    return <PdfViewer file="/data/wie.pdf" />;
 }

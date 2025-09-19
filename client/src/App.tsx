@@ -5,8 +5,8 @@ import Timetable from "./pages/Timetable";
 import Tasks, { Mlodsza, Starsza, Elita } from "./pages/Tasks";
 import Match from "./pages/Match";
 import { useCamp } from "./context/CampContext";
-import Lectures, { WSM, ZMM, PS, OWIO, RD, WM } from "./pages/Lectures";
-import TasksArchive, { Mlodsza1, Starsza1, Elita1, Mlodsza2, Starsza2, Elita2 } from "./pages/Archive";
+import Lectures, { WSM, ZMM, PS, OWIO, RD, WM, PP, KOL, WIE } from "./pages/Lectures";
+import TasksArchive, { Mlodsza1, Starsza1, Elita1, Mlodsza2, Starsza2, Elita2, Mlodsza3, Starsza3, Elita3 } from "./pages/Archive";
 
 export default function App() {
   const camp = useCamp();
@@ -55,6 +55,9 @@ export default function App() {
             <Route path="/wyklady/owio" element={<OWIO />} />
             <Route path="/wyklady/rd" element={<RD />} />
             <Route path="/wyklady/wm" element={<WM />} />
+            <Route path="/wyklady/kol" element={<KOL />} />
+            <Route path="/wyklady/pp" element={<PP />} />
+            <Route path="/wyklady/wie" element={<WIE />} />
             <Route path="/archiwum" element={<TasksArchive />} />
             <Route path="/archiwum/mlodsza1" element={<Mlodsza1 />} />
             <Route path="/archiwum/starsza1" element={<Starsza1 />} />
@@ -62,6 +65,9 @@ export default function App() {
             <Route path="/archiwum/mlodsza2" element={<Mlodsza2 />} />
             <Route path="/archiwum/starsza2" element={<Starsza2 />} />
             <Route path="/archiwum/elita2" element={<Elita2 />} />
+            <Route path="/archiwum/mlodsza3" element={<Mlodsza3 />} />
+            <Route path="/archiwum/starsza3" element={<Starsza3 />} />
+            <Route path="/archiwum/elita3" element={<Elita3 />} />
           </Routes>
         </div>
 
