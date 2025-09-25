@@ -37,6 +37,8 @@ export default function Lectures() {
           <a
             href="https://library.oapen.org/bitstream/handle/20.500.12657/93394/external_content.pdf"
             className="underline"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             "Linguistics Olympiad. Training guide" Vlad A. Neacșu
           </a>.
@@ -46,6 +48,8 @@ export default function Lectures() {
           <a
             href="https://www.youtube.com/playlist?list=PLpwg6OcynHX0Gv5NPyV11qZ37ME7of47p"
             className="underline"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             w playliście YouTube
           </a>
