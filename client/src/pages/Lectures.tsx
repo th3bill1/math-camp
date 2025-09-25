@@ -28,6 +28,30 @@ export default function Lectures() {
           </Link>
         ))}
       </div>
+      <h1 className="text-xl font-bold text-gray-800 mt-20">
+        Dla osób zainsteresowanych lingiwstyką matematyczną polecamy:
+      </h1>
+      <ul className="list-disc list-inside space-y-2 text-gray-700">
+        <li>
+          Książkę &nbsp;
+          <a
+            href="https://library.oapen.org/bitstream/handle/20.500.12657/93394/external_content.pdf"
+            className="underline"
+          >
+            "Linguistics Olympiad. Training guide" Vlad A. Neacșu
+          </a>.
+        </li>
+        <li>
+          Materiały &nbsp;
+          <a
+            href="https://www.youtube.com/playlist?list=PLpwg6OcynHX0Gv5NPyV11qZ37ME7of47p"
+            className="underline"
+          >
+            w playliście YouTube
+          </a>
+          &nbsp; na kanale "PraktycznaTeoria"
+        </li>
+      </ul>
     </div>
   );
 }

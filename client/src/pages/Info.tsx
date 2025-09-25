@@ -24,11 +24,6 @@ export default function Info() {
           szkole i bycie częścią społeczności matematycznej II LO
         </li>
       </ul>
-
-      <div className="bg-yellow-50 border border-yellow-300 rounded-lg p-4 text-yellow-800">
-        <strong>Uwaga:</strong> jeśli pojawią się ogłoszenia, będą one
-        zamieszczone w tym miejscu.
-      </div>
     </div>
   );
 }

@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route, NavLink, Link } from "react-router-dom";
 import "katex/dist/katex.min.css";
 import Landing from "./pages/Landing";
 import Timetable from "./pages/Timetable";
-import Tasks, { Mlodsza, Starsza, Elita } from "./pages/Tasks";
+import { Mlodsza, Starsza, Elita } from "./pages/Tasks";
+import { Navigate } from "react-router-dom";
 import Match from "./pages/Match";
 import { useCamp } from "./context/CampContext";
 import Lectures, { WSM, ZMM, PS, OWIO, RD, WM, PP, KOL, WIE } from "./pages/Lectures";
@@ -43,7 +44,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/kalendarz" element={<Timetable />} />
-            <Route path="/zadania" element={<Tasks />} />
+            <Route path="/zadania" element={<TasksArchive />} />
             {/* <Route path="/wyniki" element={<Scores />} /> */}
             <Route path="/mecz" element={<Match />} />
             <Route path="/zadania/mlodsza" element={<Mlodsza />} />
@@ -59,7 +60,7 @@ export default function App() {
             <Route path="/wyklady/kol" element={<KOL />} />
             <Route path="/wyklady/pp" element={<PP />} />
             <Route path="/wyklady/wie" element={<WIE />} />
-            <Route path="/archiwum" element={<TasksArchive />} />
+            <Route path="/archiwum" element={<Navigate to="/zadania" replace />} />
             <Route path="/archiwum/mlodsza1" element={<Mlodsza1 />} />
             <Route path="/archiwum/starsza1" element={<Starsza1 />} />
             <Route path="/archiwum/elita1" element={<Elita1 />} />
@@ -73,6 +74,7 @@ export default function App() {
             <Route path="/mecz/mlodsza" element={<MlodszaMecz />} />
             <Route path="/mecz/starsza" element={<StarszaMecz />} />
             <Route path="/mecz/elita" element={<ElitaMecz />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
 

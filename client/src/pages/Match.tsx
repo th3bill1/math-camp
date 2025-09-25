@@ -5,13 +5,6 @@ export default function Match() {
     <div className="max-w-4xl mx-auto px-6 py-10 space-y-8">
       <header className="text-center space-y-2">
         <h1 className="text-3xl font-bold">Mecz Matematyczny</h1>
-        <p className="text-gray-600">
-          Szczegółowe informacje organizacyjne już wkrótce. Sprawdź także{" "}
-          <Link to="/kalendarz" className="underline">
-            kalendarz
-          </Link>{" "}
-          po terminy.
-        </p>
       </header>
 
       {/* Ogłoszenie / zapowiedź */}
@@ -112,12 +105,6 @@ export default function Match() {
           </p>
         </div>
       </section>
-
-      {/* „Wkrótce” */}
-      <footer className="rounded-xl bg-gray-50 border p-4 text-center text-gray-700">
-        <strong>Więcej informacji o meczu już wkrótce.</strong> Zaglądaj tutaj oraz do{" "}
-        <Link to="/kalendarz" className="underline">kalendarza</Link>.
-      </footer>
     </div>
   );
 }

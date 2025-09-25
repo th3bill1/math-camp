@@ -53,7 +53,7 @@ export default function TasksArchive() {
   return (
     <div className="flex flex-col items-center justify-center py-12 space-y-8">
       <h1 className="text-2xl font-bold text-gray-800">
-        Zobacz zadania swojej grupy
+        Zobacz zadania z poszczególnych dni i grup
       </h1>
 
       <div className="grid gap-6 sm:grid-cols-3">
